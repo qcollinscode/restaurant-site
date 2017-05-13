@@ -12604,13 +12604,46 @@ header {
   min-height: 100%;
   width: 100%;
 }
+/* line 12, ../sass/_layout.scss */
+.wrapper .landing {
+  height: 750px;
+  background: url("./../img/dev/foodhead.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 19, ../sass/_layout.scss */
+.wrapper .about-us {
+  height: 880px;
+  background: dimgrey;
+}
+/* line 23, ../sass/_layout.scss */
+.wrapper .specialities {
+  height: 600px;
+  background: maroon;
+}
+/* line 27, ../sass/_layout.scss */
+.wrapper .menu {
+  height: 1512px;
+  background: brown;
+}
+/* line 31, ../sass/_layout.scss */
+.wrapper .booking {
+  height: 590px;
+  background: purple;
+}
+/* line 35, ../sass/_layout.scss */
+.wrapper .hours {
+  height: 320px;
+  background: teal;
+}
 
-/* line 14, ../sass/_layout.scss */
+/* line 41, ../sass/_layout.scss */
 footer {
   background: #aa1415;
   padding: 1.5em;
 }
-/* line 17, ../sass/_layout.scss */
+/* line 44, ../sass/_layout.scss */
 footer h1 {
   font-size: 1.7em;
   text-align: center;

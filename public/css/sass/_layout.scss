@@ -9,6 +9,33 @@ header {
 .wrapper {
     min-height: 100%;
     width: 100%;
+    .landing {
+        height: 750px;
+        background: url('./../img/dev/foodhead.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .about-us {
+        height: 880px;
+        background: dimgrey;
+    }
+    .specialities {
+        height: 600px;
+        background: maroon;
+    }
+    .menu {
+        height: 1512px;
+        background: brown;
+    }
+    .booking {
+        height: 590px;
+        background: purple;
+    }
+    .hours {
+        height: 320px;
+        background: teal;
+    }
 }
 
 footer {
