@@ -1,0 +1,36 @@
+.nav-top {
+    height: inherit;
+    .nav-list-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        min-height: 100%;
+        .logo {
+            margin: 0;
+            align-self: center;
+            @include bp-medium {
+                width: 100%;
+                text-align: center;
+            }
+            a {
+                color: white;
+            }
+        }
+        .lt-nav-list {
+            align-self: center;
+            display: none;
+            .item {
+                float: left;
+                align-self: center;
+                font-family: GothamMedium;
+                
+                a {
+                    padding: 1em;
+                    display: block;
+                    color: white;
+                    font-size: 1.6em;
+                }
+            }
+        }
+    }
+}
