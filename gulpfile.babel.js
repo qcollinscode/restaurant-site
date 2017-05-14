@@ -10,6 +10,8 @@ import minifyJs from 'gulp-minify';
 import babel from 'gulp-babel';
 import rename from 'gulp-rename';
 import plumber from 'gulp-plumber';
+import concatJS from 'gulp-concat';
+import cssConcat from 'gulp-concat-css';
 import watch from 'gulp-watch';
 import merge from 'merge-stream';
 import del from 'del';
@@ -21,6 +23,23 @@ import nodemon from 'gulp-nodemon';
 const browsersync = bs.create();
 const reload = bs.reload;
 
+/**
+ * Concat CSS
+ */
+gulp.task('concatCSS', function() {
+  return gulp.src('./public/css/stylesheets/*.css')
+    .pipe(cssConcat('bundle.css'))
+    .pipe(gulp.dest('public/css/'))
+});
+
+/**
+ * Concat JS
+ */
+gulp.task('concatJS', function() {
+  return gulp.src(['public/js/jquery.min.js', 'public/js/bootstrap.min.js', 'public/js/bootstrap-clockpicker.min.js', 'public/js/bootstrap-datepicker.min.js', 'public/js/main.js' ])
+    .pipe(concatJS('bundle.js'))
+    .pipe(gulp.dest('./public/js/'))
+});
 
 /**
  * Styles Task

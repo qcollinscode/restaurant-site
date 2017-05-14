@@ -28,6 +28,7 @@ Q:::::::QQ::::::::Q   C:::::CCCCCCCC::::C  C:::::CCCCCCCC::::CO:::::::OOO:::::::
      bodyParser = require("body-parser"),
      PORT = process.env.PORT || 3000,
      IP = process.env.IP,
+     compression = require('compression'),
      app = express();
 
 
@@ -40,6 +41,9 @@ Q:::::::QQ::::::::Q   C:::::CCCCCCCC::::C  C:::::CCCCCCCC::::CO:::::::OOO:::::::
 
 /** View Engine **/
  app.set("view engine", "ejs");
+
+/** Compression */
+app.use(compression())
 
  /************************************
   * DATA
