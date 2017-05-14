@@ -94,3 +94,11 @@
 		src: $src;
 	}
 }
+
+@mixin food-card-pic($url) {
+	background:url($url);
+	height: 18em;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}

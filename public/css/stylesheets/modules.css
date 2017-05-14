@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'bp-medium'.
-        on line 11 of C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss, in `bp-medium'
-        from line 11 of C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss
+        on line 15 of C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss, in `bp-medium'
+        from line 15 of C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss
 
-6:         flex-wrap: wrap;
-7:         min-height: 100%;
-8:         .logo {
-9:             margin: 0;
-10:             align-self: center;
-11:             @include bp-medium {
-12:                 width: 100%;
-13:                 text-align: center;
-14:             }
-15:             a {
-16:                 color: white;
+10:         flex-wrap: wrap;
+11:         min-height: 100%;
+12:         .logo {
+13:             margin: 0;
+14:             align-self: center;
+15:             @include bp-medium {
+16:                 width: 100%;
+17:                 text-align: center;
+18:             }
+19:             a {
+20:                 color: white;
 
 Backtrace:
-C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss:11:in `bp-medium'
-C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss:11
+C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss:15:in `bp-medium'
+C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss:15
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
@@ -83,19 +83,14 @@ C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:4
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:294:in `watch'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-C:/Ruby23-x64/bin/compass:22:in `load'
-C:/Ruby23-x64/bin/compass:22:in `<main>'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:331:in `block in watch'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'bp-medium'.\A         on line 11 of C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss, in `bp-medium'\A         from line 11 of C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss\A \A 6:         flex-wrap: wrap;\A 7:         min-height: 100%;\A 8:         .logo {\A 9:             margin: 0;\A 10:             align-self: center;\A 11:             @include bp-medium {\A 12:                 width: 100%;\A 13:                 text-align: center;\A 14:             }\A 15:             a {\A 16:                 color: white;"; }
+  content: "Error: Undefined mixin 'bp-medium'.\A         on line 15 of C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss, in `bp-medium'\A         from line 15 of C:/Users/MyPC/Desktop/Restaurant/eucada-restaurant/public/css/sass/modules.scss\A \A 10:         flex-wrap: wrap;\A 11:         min-height: 100%;\A 12:         .logo {\A 13:             margin: 0;\A 14:             align-self: center;\A 15:             @include bp-medium {\A 16:                 width: 100%;\A 17:                 text-align: center;\A 18:             }\A 19:             a {\A 20:                 color: white;"; }

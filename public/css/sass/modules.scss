@@ -1,3 +1,7 @@
+header {
+    display: none;
+}
+
 .nav-top {
     height: inherit;
     .nav-list-container {
@@ -31,6 +35,235 @@
                     font-size: 1.6em;
                 }
             }
+        }
+    }
+}
+
+.landing {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    background: url('./../img/dev/foodhead.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:after {
+        content: '';
+        max-height: 750px;
+        height: 100vh;
+        width: 100%;
+        background: black;
+        opacity: 0.6;
+        top: 0;
+        position: absolute;
+        z-index: 1;
+    }
+    .landing-text-container {
+        z-index: 2;
+        div {
+            height: 60px;
+            width: 60px;
+            background: white;
+            display: none;
+            i {
+                
+            }
+        }
+        h1 {
+            color: #A6843D;
+            font-weight: bolder;
+            font-size: 4.5em;
+            letter-spacing: 0.1em;
+            text-shadow: 0px 2px 10px black;
+            & + p {
+                color: white;
+                font-size: 1.5em;
+                letter-spacing: 0.2em;
+                margin-top: 0.5em;
+                & + p {
+                    font-size: 1.2em;
+                    margin-top: 2em;
+                    letter-spacing: 0.1em;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.aboutUs {
+    .aboutUs-text-box {
+        @include bp-small {
+            padding-bottom: 4em;
+        }
+        h1 {
+            color: #A6843D;
+            font-weight: 900;
+            font-size: 4.5em;
+            letter-spacing: 0.1em;
+            text-align: center;
+            padding: 2em 0 1em 0;
+        }
+        p  {
+            text-align: center;
+            color: dimgrey;
+            font-size: 1.5em;
+            letter-spacing: 0.04em;
+        }
+        & > p:nth-child(2), & > p:nth-child(3) {
+            margin-bottom: 3em;
+        }
+    }
+    .side-box {
+        max-height: 880px;
+        @include bp-large {
+            max-height: none;
+        }
+        .contact-box-container {
+            position: relative;
+            z-index: 2;
+            top: -20em;
+            @include bp-large {
+                top: 0;
+            }
+            .contact-box-text {
+                color: white;
+                background: #550717;
+                padding: 2em;
+                margin-bottom: 3.5em;
+                h1 {
+                    letter-spacing: 0.1em;
+                    font-size: 2.8em;
+                    font-weight: bold;
+                    margin-bottom: 0.3em;
+                    color: #A6843D;
+                    & + p {
+                        font-size: 1.1em;
+                    }
+                }
+                .address {
+                    margin-bottom: 1.8em;
+                    h2 {
+                        margin-bottom: 0.3em;
+                    & + p {
+                        margin-bottom: 0;
+                        & + p {
+                            margin-bottom: 1.2em;
+                        }
+                    }
+                    }
+                    span {
+                        color: #A6843D;
+                        border-top: 1.5px solid #A6843D;
+                        border-bottom: 1.5px solid #A6843D;
+                        padding: 0.2em 0;
+                        font-size: 1.1em;
+                        cursor: pointer;
+                    }
+                }
+                .hours {
+                    margin-bottom: 2em;
+                    h2 {
+                        margin-bottom: 0.3em;
+                    }
+                    p {
+                        margin: 0;
+                        color: #A6843D;
+                        span {
+                            color: white;
+                        }
+                        & + p {
+                            span {
+
+                            }
+                        }
+                    }
+                }
+                .button-container {
+                    text-align: center;
+                    button {
+                        border-radius: 0;
+                        border: 1px solid #A6843D;
+                        background: transparent;
+                        font-size: 1.3em;
+                    }
+                }
+            }
+            .contact-img {
+                background: url('./../img/dev/contactboximg.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 603px;
+                margin-bottom: 2em;
+            }
+        }
+    }
+}
+
+.specialities {
+    background: url('./../img/dev/specialitiesbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    &:after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        top: 0;
+        background: black;
+        opacity: 0.6;
+        position: absolute;
+        z-index: 3;
+    }
+    .specialities-top {
+        z-index: 5;
+        position: relative;
+        margin-bottom: 5em;
+        h1 {
+            letter-spacing: 0.1em;
+            font-size: 4em;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 0.7em;
+            color: #fff;
+            & + p {
+                font-size: 1.1em;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+    .food-crd {
+        position: relative;
+        z-index: 5;
+        @include bp-small {
+            margin-bottom: 2em;
+        }
+        .img01 {
+            @include food-card-pic('./../img/dev/specialitiescrdpic01.jpg');
+        }
+        .img02 {
+            @include food-card-pic('./../img/dev/specialitiescrdpic02.jpg');
+        }
+        .img03 {
+            @include food-card-pic('./../img/dev/specialitiescrdpic03.jpg');
+        }
+        .img04 {
+            @include food-card-pic('./../img/dev/specialitiescrdpic04.jpg');
+        }
+        .info {
+            height: 5em;
+            background: white;
+
         }
     }
 }

@@ -12561,30 +12561,35 @@ button.close {
 /* line 13, ../sass/_base.scss */
 h1, h2, h3, h4, h5 {
   margin: 0;
-  font-family: 'arial';
+  font-family: 'Medula One', Helvetica, Sans-serif;
 }
 
 /* line 18, ../sass/_base.scss */
+p, span {
+  font-family: 'Lato', Sans-serif;
+}
+
+/* line 22, ../sass/_base.scss */
 a {
   text-decoration: none;
 }
 
-/* line 22, ../sass/_base.scss */
+/* line 26, ../sass/_base.scss */
 ul {
   list-style: none;
 }
 
-/* line 26, ../sass/_base.scss */
+/* line 30, ../sass/_base.scss */
 html, html body {
   height: 100%;
   width: 100%;
 }
-/* line 29, ../sass/_base.scss */
+/* line 33, ../sass/_base.scss */
 html body {
   font-size: 14px;
 }
 @media only screen and (max-width: 992px) {
-  /* line 29, ../sass/_base.scss */
+  /* line 33, ../sass/_base.scss */
   html body {
     font-size: 10px;
   }
@@ -12606,44 +12611,41 @@ header {
 }
 /* line 12, ../sass/_layout.scss */
 .wrapper .landing {
-  height: 750px;
-  background: url("./../img/dev/foodhead.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  max-height: 750px;
 }
-/* line 19, ../sass/_layout.scss */
-.wrapper .about-us {
-  height: 880px;
-  background: dimgrey;
+/* line 15, ../sass/_layout.scss */
+.wrapper .aboutUs {
+  min-height: 880px;
+  max-height: 880px;
+  background: #fff;
+}
+@media only screen and (max-width: 1200px) {
+  /* line 15, ../sass/_layout.scss */
+  .wrapper .aboutUs {
+    max-height: none;
+  }
 }
 /* line 23, ../sass/_layout.scss */
 .wrapper .specialities {
-  height: 600px;
-  background: maroon;
+  min-height: 600px;
 }
-/* line 27, ../sass/_layout.scss */
+/* line 26, ../sass/_layout.scss */
 .wrapper .menu {
-  height: 1512px;
+  min-height: 1512px;
   background: brown;
 }
-/* line 31, ../sass/_layout.scss */
+/* line 30, ../sass/_layout.scss */
 .wrapper .booking {
-  height: 590px;
+  min-height: 590px;
   background: purple;
 }
-/* line 35, ../sass/_layout.scss */
-.wrapper .hours {
-  height: 320px;
-  background: teal;
-}
 
-/* line 41, ../sass/_layout.scss */
+/* line 36, ../sass/_layout.scss */
 footer {
   background: #aa1415;
   padding: 1.5em;
 }
-/* line 44, ../sass/_layout.scss */
+/* line 39, ../sass/_layout.scss */
 footer h1 {
   font-size: 1.7em;
   text-align: center;
@@ -12652,47 +12654,334 @@ footer h1 {
 }
 
 /* line 1, ../sass/modules.scss */
+header {
+  display: none;
+}
+
+/* line 5, ../sass/modules.scss */
 .nav-top {
   height: inherit;
 }
-/* line 3, ../sass/modules.scss */
+/* line 7, ../sass/modules.scss */
 .nav-top .nav-list-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   min-height: 100%;
 }
-/* line 8, ../sass/modules.scss */
+/* line 12, ../sass/modules.scss */
 .nav-top .nav-list-container .logo {
   margin: 0;
   align-self: center;
 }
 @media only screen and (max-width: 992px) {
-  /* line 8, ../sass/modules.scss */
+  /* line 12, ../sass/modules.scss */
   .nav-top .nav-list-container .logo {
     width: 100%;
     text-align: center;
   }
 }
-/* line 15, ../sass/modules.scss */
+/* line 19, ../sass/modules.scss */
 .nav-top .nav-list-container .logo a {
   color: white;
 }
-/* line 19, ../sass/modules.scss */
+/* line 23, ../sass/modules.scss */
 .nav-top .nav-list-container .lt-nav-list {
   align-self: center;
   display: none;
 }
-/* line 22, ../sass/modules.scss */
+/* line 26, ../sass/modules.scss */
 .nav-top .nav-list-container .lt-nav-list .item {
   float: left;
   align-self: center;
   font-family: GothamMedium;
 }
-/* line 27, ../sass/modules.scss */
+/* line 31, ../sass/modules.scss */
 .nav-top .nav-list-container .lt-nav-list .item a {
   padding: 1em;
   display: block;
   color: white;
   font-size: 1.6em;
+}
+
+/* line 42, ../sass/modules.scss */
+.landing {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  background: url("./../img/dev/foodhead.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 52, ../sass/modules.scss */
+.landing:after {
+  content: '';
+  max-height: 750px;
+  height: 100vh;
+  width: 100%;
+  background: black;
+  opacity: 0.6;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+}
+/* line 63, ../sass/modules.scss */
+.landing .landing-text-container {
+  z-index: 2;
+}
+/* line 65, ../sass/modules.scss */
+.landing .landing-text-container div {
+  height: 60px;
+  width: 60px;
+  background: white;
+  display: none;
+}
+/* line 74, ../sass/modules.scss */
+.landing .landing-text-container h1 {
+  color: #A6843D;
+  font-weight: bolder;
+  font-size: 4.5em;
+  letter-spacing: 0.1em;
+  text-shadow: 0px 2px 10px black;
+}
+/* line 80, ../sass/modules.scss */
+.landing .landing-text-container h1 + p {
+  color: white;
+  font-size: 1.5em;
+  letter-spacing: 0.2em;
+  margin-top: 0.5em;
+}
+/* line 85, ../sass/modules.scss */
+.landing .landing-text-container h1 + p + p {
+  font-size: 1.2em;
+  margin-top: 2em;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 97, ../sass/modules.scss */
+  .aboutUs .aboutUs-text-box {
+    padding-bottom: 4em;
+  }
+}
+/* line 101, ../sass/modules.scss */
+.aboutUs .aboutUs-text-box h1 {
+  color: #A6843D;
+  font-weight: 900;
+  font-size: 4.5em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 2em 0 1em 0;
+}
+/* line 109, ../sass/modules.scss */
+.aboutUs .aboutUs-text-box p {
+  text-align: center;
+  color: dimgrey;
+  font-size: 1.5em;
+  letter-spacing: 0.04em;
+}
+/* line 115, ../sass/modules.scss */
+.aboutUs .aboutUs-text-box > p:nth-child(2), .aboutUs .aboutUs-text-box > p:nth-child(3) {
+  margin-bottom: 3em;
+}
+/* line 119, ../sass/modules.scss */
+.aboutUs .side-box {
+  max-height: 880px;
+}
+@media only screen and (max-width: 1200px) {
+  /* line 119, ../sass/modules.scss */
+  .aboutUs .side-box {
+    max-height: none;
+  }
+}
+/* line 124, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container {
+  position: relative;
+  z-index: 2;
+  top: -20em;
+}
+@media only screen and (max-width: 1200px) {
+  /* line 124, ../sass/modules.scss */
+  .aboutUs .side-box .contact-box-container {
+    top: 0;
+  }
+}
+/* line 131, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text {
+  color: white;
+  background: #550717;
+  padding: 2em;
+  margin-bottom: 3.5em;
+}
+/* line 136, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text h1 {
+  letter-spacing: 0.1em;
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  color: #A6843D;
+}
+/* line 142, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text h1 + p {
+  font-size: 1.1em;
+}
+/* line 146, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text .address {
+  margin-bottom: 1.8em;
+}
+/* line 148, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text .address h2 {
+  margin-bottom: 0.3em;
+}
+/* line 150, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text .address h2 + p {
+  margin-bottom: 0;
+}
+/* line 152, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text .address h2 + p + p {
+  margin-bottom: 1.2em;
+}
+/* line 157, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text .address span {
+  color: #A6843D;
+  border-top: 1.5px solid #A6843D;
+  border-bottom: 1.5px solid #A6843D;
+  padding: 0.2em 0;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+/* line 166, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text .hours {
+  margin-bottom: 2em;
+}
+/* line 168, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text .hours h2 {
+  margin-bottom: 0.3em;
+}
+/* line 171, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text .hours p {
+  margin: 0;
+  color: #A6843D;
+}
+/* line 174, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text .hours p span {
+  color: white;
+}
+/* line 184, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text .button-container {
+  text-align: center;
+}
+/* line 186, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-box-text .button-container button {
+  border-radius: 0;
+  border: 1px solid #A6843D;
+  background: transparent;
+  font-size: 1.3em;
+}
+/* line 194, ../sass/modules.scss */
+.aboutUs .side-box .contact-box-container .contact-img {
+  background: url("./../img/dev/contactboximg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 603px;
+  margin-bottom: 2em;
+}
+
+/* line 206, ../sass/modules.scss */
+.specialities {
+  background: url("./../img/dev/specialitiesbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+/* line 217, ../sass/modules.scss */
+.specialities:after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: black;
+  opacity: 0.6;
+  position: absolute;
+  z-index: 3;
+}
+/* line 227, ../sass/modules.scss */
+.specialities .specialities-top {
+  z-index: 5;
+  position: relative;
+  margin-bottom: 5em;
+}
+/* line 231, ../sass/modules.scss */
+.specialities .specialities-top h1 {
+  letter-spacing: 0.1em;
+  font-size: 4em;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.7em;
+  color: #fff;
+}
+/* line 238, ../sass/modules.scss */
+.specialities .specialities-top h1 + p {
+  font-size: 1.1em;
+  color: #fff;
+  text-align: center;
+}
+/* line 245, ../sass/modules.scss */
+.specialities .food-crd {
+  position: relative;
+  z-index: 5;
+}
+@media only screen and (max-width: 768px) {
+  /* line 245, ../sass/modules.scss */
+  .specialities .food-crd {
+    margin-bottom: 2em;
+  }
+}
+/* line 251, ../sass/modules.scss */
+.specialities .food-crd .img01 {
+  background: url("./../img/dev/specialitiescrdpic01.jpg");
+  height: 18em;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 254, ../sass/modules.scss */
+.specialities .food-crd .img02 {
+  background: url("./../img/dev/specialitiescrdpic02.jpg");
+  height: 18em;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 257, ../sass/modules.scss */
+.specialities .food-crd .img03 {
+  background: url("./../img/dev/specialitiescrdpic03.jpg");
+  height: 18em;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 260, ../sass/modules.scss */
+.specialities .food-crd .img04 {
+  background: url("./../img/dev/specialitiescrdpic04.jpg");
+  height: 18em;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 263, ../sass/modules.scss */
+.specialities .food-crd .info {
+  height: 5em;
+  background: white;
 }

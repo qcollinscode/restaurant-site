@@ -10,31 +10,26 @@ header {
     min-height: 100%;
     width: 100%;
     .landing {
-        height: 750px;
-        background: url('./../img/dev/foodhead.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        max-height: 750px;
     }
-    .about-us {
-        height: 880px;
-        background: dimgrey;
+    .aboutUs {
+        min-height: 880px;
+        max-height: 880px;
+        @include bp-large {
+            max-height: none;
+        }
+        background: #fff;
     }
     .specialities {
-        height: 600px;
-        background: maroon;
+        min-height: 600px;
     }
     .menu {
-        height: 1512px;
+        min-height: 1512px;
         background: brown;
     }
     .booking {
-        height: 590px;
+        min-height: 590px;
         background: purple;
-    }
-    .hours {
-        height: 320px;
-        background: teal;
     }
 }
 
