@@ -69,7 +69,7 @@
                 <div class="col-sm-3">
                     <div class="food-crd">
                         <div class="img<%= num %>"></div>
-                        <div class="info">Lasagna.............99</div>
+                        <div class="info"><p><span>Lasagna</span> ................ <span>$4.98</span></p></div>
                     </div>
                 </div>
                 <% } %>
@@ -90,31 +90,35 @@
             <div class="row">
             <% for ( var i = 0; i < 8; i++) { %>
                 <div class="col-sm-6">
-                    <div class="menu-item">
-                        <div class="menu-item-text">
-                            <h1></h1>
+                    <div class="row menu-item">
+                        <div class="menu-item-text col-xs-8 col-lg-8">
+                            <h1>Cheese Pizza</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus obcaecati beatae excepturi sed........................</p>
                         </div>
-                        <div class="menu-item-price">
-                            <p></p>
+                        <div class="menu-item-price col-xs-3 col-lg-3 col-lg-push-1">
+                            <p>$4.00</p>
                         </div>
                     </div>
                 </div>
             <% } %>
             </div>
-            <div class="menu-title-container">
-                <h1 class="menu-title">........ DESERTS ........</h1>
+            <div class="row">
+                <div class="menu-top col-sm-12">
+                    <div class="menu-title-container">
+                        <h1 class="menu-title">........ DESERTS ........</h1>
+                    </div>
+                </div>
             </div>
             <div class="row">
             <% for(var i = 0; i < 8; i++) { %>
                 <div class="col-sm-6">
-                    <div class="menu-item">
-                        <div class="menu-item-text">
-                            <h1></h1>
+                    <div class="row menu-item">
+                        <div class="menu-item-text col-xs-8 col-lg-8">
+                            <h1>Cheese Pizza</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus obcaecati beatae excepturi sed........................</p>
                         </div>
-                        <div class="menu-item-price">
-                            <p></p>
+                        <div class="menu-item-price col-xs-3 col-lg-3 col-lg-push-1">
+                            <p>$4.00</p>
                         </div>
                     </div>
                 </div>
@@ -122,7 +126,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <p><button class="btn" type="button">View All Menu</button></p>
+                    <p class="button-container"><button class="btn" type="button">View All Menu</button></p>
                 </div>
             </div>
         </div>
@@ -174,7 +178,7 @@
                 </div>
             </div>
             <div class="row">
-                <p><button type="button" class="btn">Book Now</button></p>
+                <p class="button-container"><button type="button" class="btn">Book Now</button></p>
             </div>
         </div>
     </div>

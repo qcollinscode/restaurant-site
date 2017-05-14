@@ -15,8 +15,12 @@ h1, h2, h3, h4, h5 {
     font-family:'Medula One', Helvetica, Sans-serif;
 }
 
-p, span {
+p, span, button, label, select, input {
      font-family: 'Lato', Sans-serif;
+}
+
+button {
+    font-weight: bold;
 }
 
 a {

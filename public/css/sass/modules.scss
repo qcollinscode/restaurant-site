@@ -213,6 +213,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 9em 0;
     width: 100%;
     &:after {
         content: '';
@@ -220,7 +221,7 @@ header {
         width: 100%;
         top: 0;
         background: black;
-        opacity: 0.6;
+        opacity: 0.8;
         position: absolute;
         z-index: 3;
     }
@@ -236,9 +237,9 @@ header {
             margin-bottom: 0.7em;
             color: #fff;
             & + p {
-                font-size: 1.1em;
                 color: #fff;
                 text-align: center;
+                font-size: 1.5em;
             }
         }
     }
@@ -263,7 +264,259 @@ header {
         .info {
             height: 5em;
             background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            p {
+                color: #A6843D;
+                font-size: 1.6em;
+                span {
 
+                }
+            }
+        }
+    }
+}
+
+.menu {
+    padding: 9em 0;
+    .menu-top {
+        z-index: 5;
+        position: relative;
+        margin-bottom: 5em;
+        & > h1 {
+            letter-spacing: 0.1em;
+            font-size: 4em;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 0.7em;
+            color: #A6843D;
+            & + p {
+                color: #fff;
+                text-align: center;
+                font-size: 1.5em;
+            }
+        }
+        .menu-title-container {
+            text-align: center;
+            margin: 4em 0 0em 0;
+            .menu-title {
+                color: #A6843D;
+                letter-spacing: 0.1em;
+            }
+        }
+    }
+    .menu-item {
+        min-height: 100px;
+        height: 100px;
+        .menu-item-text {
+            color: white;
+            font-size: 1.1em;
+            @include bp-small {
+
+            }
+        }
+        .menu-item-price {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            height: 100%;
+            margin: 0;
+            @include bp-small {
+                height: auto;
+            }
+            p {
+                font-size: 2em;
+                margin: 0;
+                text-align: center;
+                font-weight: bold;
+                color: #A6843D;           
+            }
+        }
+    }
+    .button-container {
+        margin-top: 6em;
+        text-align: center;
+        button {
+            background: #A6843D;
+            border-radius: 0;
+            padding: 0.5em 2em;
+            font-size: 1.4em;
+            color: white;
+        }
+    }
+}
+
+.booking {
+    background: url('./../img/dev/bookingbg.jpg');
+    background-size: cover;
+    background-position: bottom; 
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    padding: 9em 0;
+    &:after {
+        content: '';
+        background: black;
+        opacity: 0.7;
+        position: absolute;
+        top: 0; 
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+    .container {
+        z-index: 3;
+        position: relative;
+    }
+    .menu-top {
+        z-index: 5;
+        position: relative;
+        margin-bottom: 5em;
+        & > h1 {
+            letter-spacing: 0.1em;
+            font-size: 4em;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 0.7em;
+            color: #fff;
+            & + p {
+                color: #fff;
+                text-align: center;
+                font-size: 1.25em;
+            }
+        }
+    }
+    .booking-form {
+        label {
+            color: #fff;
+            text-transform: uppercase;
+        }
+        select {
+            border-radius: 0;
+            font-weight: 900;
+            padding: 0.5em 3.5em 0.5em 1em;
+            height: 3em;
+            font-size: 1.1em;
+            border: none;
+            appearance: none;
+            -ms-appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            position: relative;
+            background: #fff;
+            line-height: 1.5em;
+            margin: 0;
+            background-image:
+                linear-gradient(45deg, transparent 50%, black 50%),
+                linear-gradient(135deg, black 50%, transparent 50%);
+            background-position:
+                calc(100% - 20px) calc(1em + 7px),
+                calc(100% - 15px) calc(1em + 7px),
+                100% 0;
+            background-size:
+                5px 5px,
+                5px 5px,
+                2.5em 2.5em;
+            background-repeat: no-repeat;
+            &::-ms-expand {
+                display: none;
+            }
+        }
+        option {
+        }
+        input {
+            border-radius: 0;
+            font-weight: 900;
+            padding: 0.5em 3.5em 0.5em 1em;
+            height: 3em;
+            font-size: 1.1em;
+        }
+    }
+    .button-container {
+        margin-top: 3em;
+        text-align: center;
+        button {
+            background: #A6843D;
+            border-radius: 0;
+            padding: 0.5em 2em;
+            font-size: 1.4em;
+            color: white;
+        }
+    }
+}
+
+.footer {
+    padding: 40px 0;
+    .address-container, .hours-container, .social-container {
+        padding: 0 0.5em;
+        text-align: left;
+        margin: 2em 0;
+        .text-container {
+            min-height: 4.5em;
+            @include bp-small {
+                min-height: auto;
+            }
+        }
+        button {
+            background: transparent;
+            border: 1.2px solid #A6843D;
+            border-radius: 0;
+            font-size: 1.4em;
+            color: #fff;
+            margin-top: 0.5em;
+        }
+        h1 {
+            text-align: left;
+            margin-bottom: 0.5em;
+        }
+        p {
+            color: #fff;
+            margin-bottom: 0.8em;
+            span {
+                color: #fff;
+            }
+        }
+    }
+
+    .address-container {
+        margin-top: 4em;
+    }
+
+    .hours-container {
+        margin-top: 4em;
+    }
+
+    .social-container {
+        margin-top: 4em;
+        .text-container {
+
+        }
+        .social-icons {
+            i {
+                background: transparent;
+                border: 1.2px solid #A6843D;
+                border-radius: 0;
+                font-size: 1.4em;
+                color: #fff;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                width: 2.5em;
+                text-align: center;
+                cursor: pointer;
+            } 
+        }
+    }
+    .hours-container {
+        p {
+            color: #A6843D;
+        }
+    }
+    .copy-container {
+        padding-top: 4em;
+        @include bp-small {
+            text-align: left;
         }
     }
 }
