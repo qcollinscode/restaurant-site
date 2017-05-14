@@ -12601,61 +12601,57 @@ header {
   width: 100%;
   position: fixed;
   z-index: 100000;
-  background: black;
+  background: white;
 }
 
 /* line 9, ../sass/_layout.scss */
 .wrapper {
   min-height: 100%;
   width: 100%;
+  padding-top: 85px;
 }
-/* line 12, ../sass/_layout.scss */
+/* line 13, ../sass/_layout.scss */
 .wrapper .landing {
   max-height: 750px;
 }
-/* line 15, ../sass/_layout.scss */
+/* line 16, ../sass/_layout.scss */
 .wrapper .aboutUs {
   min-height: 880px;
   max-height: 880px;
   background: #fff;
 }
 @media only screen and (max-width: 1200px) {
-  /* line 15, ../sass/_layout.scss */
+  /* line 16, ../sass/_layout.scss */
   .wrapper .aboutUs {
     max-height: none;
   }
 }
-/* line 23, ../sass/_layout.scss */
+/* line 24, ../sass/_layout.scss */
 .wrapper .specialities {
   min-height: 600px;
 }
-/* line 26, ../sass/_layout.scss */
+/* line 27, ../sass/_layout.scss */
 .wrapper .menu {
   min-height: 1512px;
   background: brown;
 }
-/* line 30, ../sass/_layout.scss */
+/* line 31, ../sass/_layout.scss */
 .wrapper .booking {
   min-height: 590px;
   background: purple;
 }
 
-/* line 36, ../sass/_layout.scss */
+/* line 37, ../sass/_layout.scss */
 footer {
   background: #aa1415;
   padding: 1.5em;
 }
-/* line 39, ../sass/_layout.scss */
+/* line 40, ../sass/_layout.scss */
 footer h1 {
   font-size: 1.7em;
   text-align: center;
   color: white;
   font-family: GothamMedium;
-}
-
-/* line 1, ../sass/modules.scss */
-header {
-  display: none;
 }
 
 /* line 5, ../sass/modules.scss */
@@ -12683,7 +12679,7 @@ header {
 }
 /* line 19, ../sass/modules.scss */
 .nav-top .nav-list-container .logo a {
-  color: white;
+  color: #550717;
 }
 /* line 23, ../sass/modules.scss */
 .nav-top .nav-list-container .lt-nav-list {

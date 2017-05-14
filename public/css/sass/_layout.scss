@@ -3,12 +3,13 @@ header {
     width: 100%;
     position: fixed;
     z-index: 100000;
-    background: rgba(0, 0, 0, 1);
+    background: white;
 }
 
 .wrapper {
     min-height: 100%;
     width: 100%;
+    padding-top: 85px;
     .landing {
         max-height: 750px;
     }
