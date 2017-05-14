@@ -3,6 +3,8 @@
         init: function() {
             this.DOMCache();
             this.bindEvents();
+            this.datePlugin();
+            this.timePlugin();
         },
         DOMCache: function() {
             this.navLinks = $(".item>a");
@@ -14,6 +16,28 @@
         disableNavLinks: function (e) {
             const event = e || window.event;
             event.preventDefault();
+        },
+        datePlugin: function() {
+            $(document).ready(function() {
+                const date_input = $('input[name="date"]');
+                const container = $('.date').parent();
+                const options = {
+                    format: 'mm/dd/yyyy',
+                    container: container,
+                    orientation: "top right",
+                    todayHighlight: true,
+                    autoclose: true,
+                };
+                date_input.datepicker(options);
+            });
+        },
+        timePlugin: function() {
+            $('.clockpicker').clockpicker({
+                placement: 'bottom',
+                align: 'right',
+                donetext: 'Done',
+                twelvehour: true
+            });
         },
         removeClass: function(elName, className) {
             if (elName.length > 0) {

@@ -1,7 +1,4 @@
 @import 'bootstrap';
-@include font-face(ProximaNovaBold, fonts/ProximaNovaAltExtraCondensedBold);
-@include font-face(GothamMedium, fonts/GothamMedium);
-@include font-face(GothamBookRegular, fonts/GothamBookRegular);
 
 * {
     box-sizing: border-box;
@@ -38,7 +35,10 @@ html {
         @extend html;
         font-size: 14px;
         @include bp-medium {
-            font-size: 10px;
+            font-size: 13px;
+        }
+        @include bp-small {
+            font-size: 13px;
         }
     }
 }
